@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div align="center">
+    <table border="2" cellspacing="5" cellpadding="5">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Action</th>
+    </tr>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.eid}}</td>
+            <td>{{emp.ename | uppercase}}</td>
+            <td>{{emp.esal}}</td>
+            <td><input type="button" value="Delete" (click)="deleteEmployee(emp.eid)" class="btn btn-danger"></td>
+        </tr>
+    </table>
+</div>
+<br>
+<div *ngIf="check" align="center">
+    <h2>Employee Was deleted Successfully !!</h2>
+</div>

@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<div class="jumbotron">
+<div class="container">
+<h1 class="navbar navbar-nav bg-light"><b>Employee CRUD Operations</b></h1>
+<br>
+<div class="navbar navbar-expand-xs bg-dark">
+<a routerLink="Delete-Employee"><b>Delete a Employee</b></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="Fetch-Employee"><b>Fetch a particular Employee</b></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="Update-Employee"><b>Update a Employee</b></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="Create-Employee"><b>Create a Employee</b></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="Fetch-All-Employees"><b>Fetch All Employees</b></a>
+</div>
+</div>
+</div>
+<br>
+<router-outlet></router-outlet>

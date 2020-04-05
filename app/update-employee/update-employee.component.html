@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+    <div class="row justify-content-center align-items-center h-100 a">
+    <table border="2" cellpadding="5" cellspacing="5">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let emp of allemployee">
+            <td>{{ emp.eid }}</td>
+            <td>{{ emp.ename | uppercase}}</td>
+            <td>{{ emp.esal }}</td>
+            <td><input type="button" value="update" (click)="updateEmployee(emp)" class="btn btn-success"></td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="row justify-content-center align-items-center h-100 a">
+<div *ngIf="click">
+    <form>
+    ID : <input type="text" name="eid" [(ngModel)]="employee1.eid" disabled class="form-group"><br>
+    Name : <input type="text" name="ename" [(ngModel)]="employee1.ename" class="form-group"/><br>
+    Salary : <input type="text" name="esal" [(ngModel)]="employee1.esal" class="form-group"/><br>
+    <input type="button" value="update Employee" (click)="updateDetails()" class="form-group btn btn-success"/>
+</form>
+</div>
+</div>
+<br>
+<div *ngIf="check" align="center">
+    <h2>{{ message }}</h2>
+</div>

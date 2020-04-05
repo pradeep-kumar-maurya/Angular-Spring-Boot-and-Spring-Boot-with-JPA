@@ -1,0 +1,17 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div>
+    <h1 align="center">Employee Details Form</h1>
+</div>
+<br>
+<div align="center">
+    ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" name="eid" required [(ngModel)]="employee.eid" class="form-group"  placeholder="Enter Employee ID"/><br>
+    Name : <input type="text" name="ename" [(ngModel)]="employee.ename" class="form-group" required placeholder="Enter Employee Name"/><br>
+    Salary : <input type="text" name="esal" [(ngModel)]="employee.esal" required placeholder="Enter Employee Salary"/><br><br><br>
+    <input type="button" value="create Employee" (click)="employeeRegister()" class="btn btn-success"/>
+</div>  
+<br>
+<div>
+    <h2 align="center">{{ message }}</h2>
+</div>

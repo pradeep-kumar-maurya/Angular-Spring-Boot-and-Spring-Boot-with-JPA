@@ -1,0 +1,18 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div align="center">
+    <h2>Employee Details are as follows :</h2><br>
+    <table border="2" cellpadding="5" cellsapcing="5">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor="let emp of employees">
+            <td>{{ emp.eid }}</td>
+            <td>{{ emp.ename | uppercase }}</td>
+            <td>{{ emp.esal }}</td>
+        </tr>
+    </table>
+</div>
